@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tokenize Should accept valid formulae 1`] = `
+Array [
+  Object {
+    "type": "atom",
+    "value": "Cu",
+  },
+  Object {
+    "type": "atom",
+    "value": "S",
+  },
+  Object {
+    "type": "atom",
+    "value": "O",
+  },
+  Object {
+    "type": "number",
+    "value": 4,
+  },
+  Object {
+    "type": "join",
+    "value": "*",
+  },
+  Object {
+    "type": "number",
+    "value": 5,
+  },
+  Object {
+    "type": "atom",
+    "value": "H",
+  },
+  Object {
+    "type": "number",
+    "value": 2,
+  },
+  Object {
+    "type": "atom",
+    "value": "O",
+  },
+]
+`;
+
+exports[`tokenize Should accept valid formulae 2`] = `
+Array [
+  Object {
+    "type": "lParen",
+    "value": "(",
+  },
+  Object {
+    "type": "atom",
+    "value": "N",
+  },
+  Object {
+    "type": "atom",
+    "value": "H",
+  },
+  Object {
+    "type": "number",
+    "value": 4,
+  },
+  Object {
+    "type": "rParen",
+    "value": ")",
+  },
+  Object {
+    "type": "number",
+    "value": 3,
+  },
+  Object {
+    "type": "atom",
+    "value": "P",
+  },
+  Object {
+    "type": "atom",
+    "value": "O",
+  },
+  Object {
+    "type": "number",
+    "value": 4,
+  },
+]
+`;
+
+exports[`tokenize Should accept valid formulae 3`] = `
+Array [
+  Object {
+    "type": "atom",
+    "value": "Ca",
+  },
+  Object {
+    "type": "atom",
+    "value": "C",
+  },
+  Object {
+    "type": "atom",
+    "value": "O",
+  },
+  Object {
+    "type": "number",
+    "value": 3,
+  },
+]
+`;
+
+exports[`tokenize Should accept valid formulae 4`] = `
+Array [
+  Object {
+    "type": "lParen",
+    "value": "[",
+  },
+  Object {
+    "type": "atom",
+    "value": "Cu",
+  },
+  Object {
+    "type": "lParen",
+    "value": "(",
+  },
+  Object {
+    "type": "atom",
+    "value": "N",
+  },
+  Object {
+    "type": "atom",
+    "value": "H",
+  },
+  Object {
+    "type": "number",
+    "value": 3,
+  },
+  Object {
+    "type": "rParen",
+    "value": ")",
+  },
+  Object {
+    "type": "number",
+    "value": 4,
+  },
+  Object {
+    "type": "rParen",
+    "value": "]",
+  },
+  Object {
+    "type": "atom",
+    "value": "S",
+  },
+  Object {
+    "type": "atom",
+    "value": "O",
+  },
+  Object {
+    "type": "number",
+    "value": 4,
+  },
+]
+`;
+
+exports[`tokenize Should accept valid formulae 5`] = `
+Array [
+  Object {
+    "type": "atom",
+    "value": "C",
+  },
+  Object {
+    "type": "atom",
+    "value": "O",
+  },
+]
+`;
+
+exports[`tokenize Should accept valid formulae 6`] = `
+Array [
+  Object {
+    "type": "number",
+    "value": 2,
+  },
+  Object {
+    "type": "atom",
+    "value": "Cu",
+  },
+]
+`;
+
+exports[`tokenize Should accept valid formulae 7`] = `
+Array [
+  Object {
+    "type": "atom",
+    "value": "Ca",
+  },
+  Object {
+    "type": "atom",
+    "value": "Ca",
+  },
+  Object {
+    "type": "atom",
+    "value": "Ca",
+  },
+]
+`;
+
+exports[`tokenize Should accept valid formulae 8`] = `
+Array [
+  Object {
+    "type": "atom",
+    "value": "C",
+  },
+  Object {
+    "type": "atom",
+    "value": "C",
+  },
+  Object {
+    "type": "atom",
+    "value": "C",
+  },
+]
+`;
+
+exports[`tokenize Should accept valid formulae 9`] = `
+Array [
+  Object {
+    "type": "number",
+    "value": 5,
+  },
+  Object {
+    "type": "atom",
+    "value": "H",
+  },
+  Object {
+    "type": "number",
+    "value": 2,
+  },
+  Object {
+    "type": "atom",
+    "value": "O",
+  },
+  Object {
+    "type": "join",
+    "value": "*",
+  },
+  Object {
+    "type": "lParen",
+    "value": "(",
+  },
+  Object {
+    "type": "atom",
+    "value": "H",
+  },
+  Object {
+    "type": "number",
+    "value": 2,
+  },
+  Object {
+    "type": "atom",
+    "value": "O",
+  },
+  Object {
+    "type": "number",
+    "value": 2,
+  },
+  Object {
+    "type": "rParen",
+    "value": ")",
+  },
+  Object {
+    "type": "number",
+    "value": 2,
+  },
+]
+`;
