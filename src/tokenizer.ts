@@ -1,34 +1,7 @@
-type Atom = {
-  type: 'atom';
-  value: string;
-};
-
-type Number = {
-  type: 'number';
-  value: number;
-};
-
-type LParen = {
-  type: 'lParen';
-  value: '(' | '[' | '{';
-};
-
-type RParen = {
-  type: 'rParen';
-  value: ')' | ']' | '}';
-};
-
-type Join = {
-  type: 'join';
-  value: '*';
-};
-
-type Token = Atom | Number | LParen | RParen | Join;
-
 function split(formula: string): string[] {
   const segments = [];
-  for (let i = 0; i < formula.length;) {
-    if (['*', '(', '[', '{', ')', ']', '}'].includes(formula[i])) {
+  for (let i = 0; i < formula.length; ) {
+    if (["*", "(", "[", "{", ")", "]", "}"].includes(formula[i])) {
       segments.push(formula[i]);
       i++;
     } else if (/[A-Z]/.test(formula[i])) {
@@ -47,7 +20,7 @@ function split(formula: string): string[] {
         i++;
       }
       segments.push(num);
-    } else if (formula[i] === ' ') {
+    } else if (formula[i] === " ") {
       i++;
     } else {
       throw new Error(`Parsing Error at position ${i}: '${formula[i]}'`);
@@ -59,16 +32,16 @@ function split(formula: string): string[] {
 export function tokenize(formula: string): Token[] {
   const segments = split(formula);
   return segments.map((seg) => {
-    if (seg === '(' || seg === '[' || seg === '{') {
-      return {type: 'lParen', value: seg};
-    } else if (seg === ')' || seg === ']' || seg === '}') {
-      return {type: 'rParen', value: seg};
-    } else if (seg === '*') {
-      return {type: 'join', value: seg};
+    if (seg === "(" || seg === "[" || seg === "{") {
+      return { type: "lParen", value: seg };
+    } else if (seg === ")" || seg === "]" || seg === "}") {
+      return { type: "rParen", value: seg };
+    } else if (seg === "*") {
+      return { type: "join", value: seg };
     } else if (/\d+/.test(seg)) {
-      return {type: 'number', value: Number(seg)};
+      return { type: "number", value: Number(seg) };
     } else {
-      return {type: 'atom', value: seg};
+      return { type: "atom", value: seg };
     }
   });
 }
