@@ -8,7 +8,6 @@ function generateAST(tokens: Token[]) {
     switch (token.type) {
       case "number": {
         curNode.count = token.value;
-
         break;
       }
       case "lParen": {
@@ -30,10 +29,6 @@ function generateAST(tokens: Token[]) {
         const newNode = { parent: curNode, children: [token.value], count: 1 };
         curNode.children.push(newNode);
         if (tokens[index + 1]?.type === "number") curNode = newNode;
-        break;
-      }
-      case "number": {
-        curNode.count = token.value;
         break;
       }
     }

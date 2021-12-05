@@ -20,7 +20,7 @@ function split(formula: string): string[] {
         i++;
       }
       segments.push(num);
-    } else if (formula[i] === " ") {
+    } else if (/[ \n\t]/.test(formula[i])) {
       i++;
     } else {
       throw new Error(`Parsing Error at position ${i}: '${formula[i]}'`);

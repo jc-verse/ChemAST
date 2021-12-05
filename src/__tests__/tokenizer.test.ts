@@ -15,7 +15,10 @@ describe("tokenize", () => {
 
   test("Should reject bad formulae", () => {
     expect(() => tokenize("Sooo")).toThrowErrorMatchingInlineSnapshot(
-      `"Parsing Error at position 2: 'o'"`
+      `"Parsing Error at position 2: 'o'"`,
+    );
+    expect(() => tokenize("Cu'NO4'")).toThrowErrorMatchingInlineSnapshot(
+      `"Parsing Error at position 2: '''"`,
     );
   });
 });
